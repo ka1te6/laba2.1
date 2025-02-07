@@ -13,7 +13,7 @@ public:
     Student(string name, vector<int> marks) : fullName(name), grades(marks) {}
 
     void printInfo() const {
-        cout << "ФИО: " << fullName << "\nОценки: ";
+        cout << "Р¤РРћ: " << fullName << "\nРћС†РµРЅРєРё: ";
         for (int grade : grades) {
             cout << grade << " ";
         }
@@ -37,13 +37,13 @@ public:
 int main() {
 	setlocale(LC_ALL, "Russian");   
     vector<Student> students = {
-        Student("Иванов Иван Иванович", {5, 4, 5, 5}),
-        Student("Петров Петр Петрович", {3, 4, 5, 5}),
-        Student("Сидоров Сидор Сидорович", {4, 4, 4, 5}),
-        Student("Кузнецов Алексей Сергеевич", {5, 5, 5, 5})
+        Student("РРІР°РЅРѕРІ РРІР°РЅ РРІР°РЅРѕРІРёС‡", {5, 4, 5, 5}),
+        Student("РџРµС‚СЂРѕРІ РџРµС‚СЂ РџРµС‚СЂРѕРІРёС‡", {3, 4, 5, 5}),
+        Student("РЎРёРґРѕСЂРѕРІ РЎРёРґРѕСЂ РЎРёРґРѕСЂРѕРІРёС‡", {4, 4, 4, 5}),
+        Student("РљСѓР·РЅРµС†РѕРІ РђР»РµРєСЃРµР№ РЎРµСЂРіРµРµРІРёС‡", {5, 5, 5, 5})
     };
 
-    cout << "Студенты, получающие стипендию:\n";
+    cout << "РЎС‚СѓРґРµРЅС‚С‹, РїРѕР»СѓС‡Р°СЋС‰РёРµ СЃС‚РёРїРµРЅРґРёСЋ:\n";
     for (const Student& student : students) {
         if (student.scholarship()) {
             student.printInfo();
